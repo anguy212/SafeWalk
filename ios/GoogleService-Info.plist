@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>822011880613-uh5g8k1mkh6lu8skc867tj05baq3s3ic.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.822011880613-uh5g8k1mkh6lu8skc867tj05baq3s3ic</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXR8cwe46hS_NWipl6Z3Gia4ePiK-IOuQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>822011880613</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.testing</string>
+	<key>PROJECT_ID</key>
+	<string>safewalk-1bdc5</string>
+	<key>STORAGE_BUCKET</key>
+	<string>safewalk-1bdc5.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:822011880613:ios:b3b0f7928f6d2e0132194c</string>
+	<key>DATABASE_URL</key>
+	<string>https://safewalk-1bdc5.firebaseio.com</string>
+</dict>
+</plist>
