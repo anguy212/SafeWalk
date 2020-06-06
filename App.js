@@ -14,9 +14,9 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home" screenOptions={{headerShown: false}}>
         <Stack.Screen name="Home" component={HomeScreen}/>
-        {/* <Stack.Screen name="Map" componenet={DangerMap}/> */}
+        <Stack.Screen name="Map" component={DangerMap}/>
         <Stack.Screen name="MessageStart" component={MessageStart}/>
         <Stack.Screen name="voiceListen" component={VoiceNative}/>
       </Stack.Navigator>
