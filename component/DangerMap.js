@@ -80,9 +80,9 @@ export default class DangerMap extends React.Component {
     }
 
     componentWillUnmount(){
-      database()
-        .ref('/users/' + this.state.uid + '/assignees/' + this.state.key.name + '/' )
-        .set(null)
+      // database()
+      //   .ref('/users/' + this.state.uid + '/assignees/' + this.state.key.name + '/' )
+      //   .set(null)
       clearInterval(this.interval)
     }
 
@@ -164,7 +164,7 @@ export default class DangerMap extends React.Component {
       
       clearInterval(this.interval)
 
-      this.SelectedPerson()
+      // this.SelectedPerson()
 
       this.interval = setInterval(this.SelectedPerson, 6000)
     }

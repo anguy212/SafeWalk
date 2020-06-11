@@ -23,6 +23,7 @@ export default class MessageStart extends React.Component {
       this.navigation = navigation
     }
   
+
     setLocation = () => {
       Geolocation.getCurrentPosition(info => 
         {
@@ -43,24 +44,24 @@ export default class MessageStart extends React.Component {
           })
           .then(() => console.log('Data set.'));
         })
-        database()
-        .ref('/users/' + this.state.key.uid + '/assignees/')
-        .once('value')
-        .then(snapshot => {
-          if(snapshot != null)
+      database()
+      .ref('/users/' + this.state.key.uid + '/assignees/')
+      .once('value')
+      .then(snapshot => {
+        if(snapshot != null)
+        {
+          holder = []
+          snapshot.forEach(ChildSnap =>
           {
-            holder = []
-            snapshot.forEach(ChildSnap =>
+            holder.push(ChildSnap.val())
+          })
+          this.setState(
             {
-              holder.push(ChildSnap.val())
-            })
-            this.setState(
-              {
-                marks: [...holder]
-              }
-            )
-          }
-        });
+              marks: [...holder]
+            }
+          )
+        }
+      });
     }
 
     componentDidMount()
@@ -86,7 +87,7 @@ export default class MessageStart extends React.Component {
   
     async goToHome()
     {
-      await database().ref('/users/' + this.state.key.uid + '/').remove()
+      // await database().ref('/users/' + this.state.key.uid + '/').remove()
       this.navigation.navigate('Home')
     }
   
