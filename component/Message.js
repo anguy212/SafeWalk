@@ -52,20 +52,17 @@ export default class MessageStart extends React.Component {
             holder = []
             snapshot.forEach(ChildSnap =>
             {
-              //console.log(ChildSnap.val())
               holder.push(ChildSnap.val())
             })
-            // console.log(holder)
             this.setState(
               {
                 marks: [...holder]
               }
             )
-            console.log(this.state.marks)
           }
         });
     }
-  
+
     componentDidMount()
     {
       console.log("constructor") 
@@ -87,64 +84,67 @@ export default class MessageStart extends React.Component {
       clearInterval(this.interval)
     }
   
-    goToHome()
+    async goToHome()
     {
+      await database().ref('/users/' + this.state.key.uid + '/').remove()
       this.navigation.navigate('Home')
     }
   
     render() 
     {
       return (
-      <View style={{flex: 1}}>
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Details Screen</Text>
-          <Text> Name {this.state.key.name} </Text>
-          <Text> UID {this.state.key.uid} </Text>
-          <Text> Longitude {this.state.longitude} </Text>
-          <Text> Latitude {this.state.latitude} </Text>
-          {/* {this.marks.map(mark =>
-            <Text>
-              mark.longitude
-            </Text>
-            )
-          } */}
-          <Button
-          title = "I am safe"
-          onPress = {this.goToHome.bind(this)}/>
-        </View>
-        <MapView
-        style={{flex: 3}}
-        initialRegion=
-          {{
-            latitude: this.state.key.lat,
-            longitude: this.state.key.long,
-            latitudeDelta: 0.0922,
-            longitudeDelta: 0.0421,
-          }}>
-            <Marker 
-            coordinate = {{latitude: this.state.latitude, longitude: this.state.longitude}}
-            title = {this.state.key.name}>
-                <View style={{padding: 5}}>
-                  <Image
-                    style = {{width: 20, height: 32}}
-                    source = {require('../assets/App.png')}
-                  />
-                </View>
-            </Marker>
-            {this.state.marks.map(mark =>
-              (
+      <View
+        style={{ flex: 1, alignItems: 'stretch', flexDirection: 'column', borderWidth: 25, borderColor: 'ivory',
+        borderTopWidth: 50, borderBottomWidth: 30}}>
+        <View 
+          style={{ flex: 1, alignItems: 'stretch', justifyContent: 'space-around', flexDirection: 'column', borderWidth: 2, borderColor: 'dimgray',
+          borderTopWidth: 2, borderBottomWidth: 2}}>
+          <View style={{flex: 1}}>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+              <Text>Details Screen</Text>
+              <Text> Name {this.state.key.name} </Text>
+              <Text> UID {this.state.key.uid} </Text>
+              <Text> Longitude {this.state.longitude} </Text>
+              <Text> Latitude {this.state.latitude} </Text>
+              <Button
+              title = "I am safe"
+              onPress = {this.goToHome.bind(this)}/>
+            </View>
+            <MapView
+            style={{flex: 3}}
+            initialRegion=
+              {{
+                latitude: this.state.key.lat,
+                longitude: this.state.key.long,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+              }}>
                 <Marker 
-                  coordinate = {{latitude: mark.latitude, longitude: mark.longitude}}
-                  title = "Help">
-                  <View style={{padding: 5}}>
-                    <Image
-                      style = {{width: 20, height: 32}}
-                      source = {require('../assets/App.png')}
-                    />
-                  </View>
+                coordinate = {{latitude: this.state.latitude, longitude: this.state.longitude}}
+                title = {this.state.key.name}>
+                    <View style={{padding: 5}}>
+                      <Image
+                        style = {{width: 40, height: 40}}
+                        source = {require('../assets/hICON.png')}
+                      />
+                    </View>
                 </Marker>
-              ))}
-        </MapView>
+                {this.state.marks.map(mark =>
+                  (
+                    <Marker 
+                      coordinate = {{latitude: mark.latitude, longitude: mark.longitude}}
+                      title = "Help">
+                      <View style={{padding: 5}}>
+                        <Image
+                          style = {{width: 40, height: 40}}
+                          source = {require('../assets/bICON.png')}
+                        />
+                      </View>
+                    </Marker>
+                  ))}
+            </MapView>
+          </View>
+        </View>
       </View>
       )
     }
