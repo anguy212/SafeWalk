@@ -24,3 +24,10 @@ The following app is designed to be used when feeling unsafe walking home alone.
 
 ### Resources:
 - Medium's article on using react-native-voice <https://medium.com/jeremy-gottfrieds-tech-blog/tutorial-react-native-speech-recognition-d9ae54960565>
+
+---
+## Improvements and Future
+- The app now only works on ios phones. Expanding it to work with androids would be ideal in the future
+- The voice recognition works by testing the last word spoken to the keyword. This could lead to errors if the last word is initially miscalculated and recalculated later. Testing the whole sequence for the keyword would be better.
+- This app has not been tested on real phones. It would be great to test it once I get an Apple Developer's account
+
