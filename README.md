@@ -7,7 +7,7 @@ The following app is designed to be used when feeling unsafe walking home alone.
 --- 
 
 ## Usage
-| | |
+| Description | Image |
 | --- | --- | 
 | - User can select to start walk by pressing the 'Start Walk' or see people who are in danger by pressing 'See Map'. <br> <br> - 'Start Walk' requires users to enter a keyword and name. The keyword is used for the app to enter danger mode when it is spoken. The name is used to distinguish users. <br> <br> - 'See Map' requires users to enter a name to distinguish users from each other.    | ![Alt text](Images/HomeScreen.png?raw=false "Home Screen") |
 | - If 'See Map' is selected, the user can see those in danger in her area. <br> <br> - Once the user taps on a walker, they can choose to track walker and potentially find her by cliking the pop up. <br> <br> - Once the user decides to track the walker, the user will pop up on the walker's map.   | ![Alt text](Images/DangerMapSelected.png?raw=false "Tracking Map") |
