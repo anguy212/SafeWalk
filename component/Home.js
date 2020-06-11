@@ -107,16 +107,19 @@ export default class HomeScreen extends React.Component {
                 value = {this.state.keyword}
               />
               <TextInput
-                style = { { height: 40, width: 120, paddingHorizontal: 3, borderColor: 'dimgray', borderWidth: 3 } }
+                style = { { height: 40, width: 120, paddingHorizontal: 3, borderColor: 'dimgray', borderWidth: 3} }
                 placeholder = "Name"
                 onChangeText = {text => this.setState( {name: text} )}
                 value = {this.state.name}
               />
-              <Button
-                style = {{borderTopWidth: 10}}
-                title="Start Walk"
-                onPress={this.goingToVoice.bind(this)}
-              />
+              <View 
+              style = {{backgroundColor: "olive", borderTopWidth: 15, borderColor: "lemonchiffon"}}>
+                <Button
+                  title="Start Walk"
+                  onPress={this.goingToVoice.bind(this)}
+                  color = "black"
+                />
+              </View>
             </View>
             <View 
               style =
@@ -135,11 +138,15 @@ export default class HomeScreen extends React.Component {
                   onChangeText = {text => { this.setState( {nameTwo: text} )} }
                   value = {this.state.nameTwo}
                 />
-              <Button
-                style = {{borderTopWidth: 10}}
-                title="See Map"
-                onPress={this.goingToMap.bind(this)}
+              <View 
+              style = {{backgroundColor: "olive", borderTopWidth: 15, borderColor: "khaki"}}>
+                <Button
+                style = {{borderTopWidth: 15}}
+                title ="See Map"
+                onPress ={this.goingToMap.bind(this)}
+                color = "black"
               />
+              </View>
             </View>
           </View>
         </View>

@@ -177,12 +177,16 @@ export default class DangerMap extends React.Component {
           <View 
           style={{ flex: 1, alignItems: 'stretch', justifyContent: 'space-around', flexDirection: 'column', borderWidth: 2, borderColor: 'dimgray',
           borderTopWidth: 2, borderBottomWidth: 2}}>
-            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-              <Button
-                title = "Go Back"
-                onPress = {this.goHome.bind(this)}
-                style = {{borderBottomWidth: 20}}
-              />
+            <View style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "whitesmoke"}}>
+              <View 
+                style = {{backgroundColor: "whitesmoke", borderBottomWidth: 20, borderColor: "whitesmoke"}}>
+                <Button
+                  title = "Go Back"
+                  onPress = {this.goHome.bind(this)}
+                  style = {{borderBottomWidth: 20}}
+                  color = "darkolivegreen"
+                />
+              </View>
               {this.state.dBool ? 
                 <Text>  Distance From Person: {this.state.distance} meters </Text> :
                 <Text> Select Person To Assist </Text>}

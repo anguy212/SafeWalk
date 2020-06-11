@@ -100,18 +100,17 @@ export default class MessageStart extends React.Component {
           style={{ flex: 1, alignItems: 'stretch', justifyContent: 'space-around', flexDirection: 'column', borderWidth: 2, borderColor: 'dimgray',
           borderTopWidth: 2, borderBottomWidth: 2}}>
           <View style={{flex: 1}}>
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <Text>Details Screen</Text>
-              <Text> Name {this.state.key.name} </Text>
-              <Text> UID {this.state.key.uid} </Text>
-              <Text> Longitude {this.state.longitude} </Text>
-              <Text> Latitude {this.state.latitude} </Text>
-              <Button
-              title = "I am safe"
-              onPress = {this.goToHome.bind(this)}/>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: "whitesmoke"}}>
+              <View 
+                  style = {{backgroundColor: "whitesmoke", borderBottomWidth: 20, borderTopWidth: 20, borderColor: "whitesmoke"}}>
+                <Button
+                title = "I am safe"
+                onPress = {this.goToHome.bind(this)}
+                color = "darkolivegreen"/>
+              </View>
             </View>
             <MapView
-            style={{flex: 3}}
+            style={{flex: 5}}
             initialRegion=
               {{
                 latitude: this.state.key.lat,
