@@ -87,7 +87,7 @@ export default class MessageStart extends React.Component {
   
     async goToHome()
     {
-      // await database().ref('/users/' + this.state.key.uid + '/').remove()
+      await database().ref('/users/' + this.state.key.uid + '/').remove()
       this.navigation.navigate('Home')
     }
   
