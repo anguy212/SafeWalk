@@ -1,2 +1,26 @@
 # SafeWalk
-An app that is used by individuals while walking home alone to log whereabouts to safety enforcement if in danger through voice recognition 
+## Summary && Inspiration
+The following app is designed to be used when feeling unsafe walking home alone. The user can pretend to talk on the phone to the app while walking home. The app is used to log users location if a keyword is spoken. Authorities can find and track those in trouble through the same app. It is an alternative to the security measures like this:
+
+![Alt text](Images/emergency.jpeg?raw=false "Emergency Phone Meme")
+
+--- 
+
+## Usage
+| | |
+| --- | --- | 
+| - User can select to start walk by pressing the 'Start Walk' or see people who are in danger by pressing 'See Map'. <br> <br> - 'Start Walk' requires users to enter a keyword and name. The keyword is used for the app to enter danger mode when it is spoken. The name is used to distinguish users. <br> <br> - 'See Map' requires users to enter a name to distinguish users from each other.    | ![Alt text](Images/HomeScreen.png?raw=false "Home Screen") |
+| - If 'See Map' is selected, the user can see those in danger in her area. <br> <br> - Once the user taps on a walker, they can choose to track walker and potentially find her by cliking the pop up. <br> <br> - Once the user decides to track the walker, the user will pop up on the walker's map.   | ![Alt text](Images/DangerMapSelected.png?raw=false "Tracking Map") |
+| - If 'Start walk' is selected and keyword is spoken, the user will see the map of her area. <br> <br> - Once a helper decides to track the user, the helper will show up on the walker's map. <br> <br> - If the user feels safe, she can stop broadcating her location to potential helpers by pressing "I am safe" | ![Alt text](Images/DangerMap.png?raw=false "Danger Map") |
+
+---
+## Tools and Resources
+
+### Tools:
+- react-native
+- react-native-maps
+- react-native-community/geolocation
+- react-native-voice
+
+### Resources:
+- Medium's article on using react-native-voice <https://medium.com/jeremy-gottfrieds-tech-blog/tutorial-react-native-speech-recognition-d9ae54960565>
